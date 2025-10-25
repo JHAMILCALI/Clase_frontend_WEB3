@@ -56,24 +56,24 @@ function App() {
   }
   
   return (
-    <div>
+    <div className="container">
       <h1>Mensajes En Blockchain</h1>
-      <button onClick={conectarWallet}>
+      <button className='btn-connect' onClick={conectarWallet}>
         Conectar wallet
       </button>
       {
         walletConectada && (
-          <div>
+          <div className='wallet-info'>
             <strong>Wallet conectada:</strong>{walletConectada}
           </div>
         )
       }
       <input type="text" placeholder="Tu nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
       <input type="text" placeholder="Tu mensaje" value={mensaje} onChange={(e) => setMensaje(e.target.value)}/>
-      <button onClick={enviarMensaje}>
+      <button className="btn-primary" onClick={enviarMensaje}>
         Enviar mensaje
       </button>
-      <button  onClick={cargarMensajes}>Cargar mensajes</button>
+      <button className="btn-carga" onClick={cargarMensajes}>Cargar mensajes</button>
 
       <hr/>
 
